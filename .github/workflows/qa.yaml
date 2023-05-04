@@ -1,4 +1,4 @@
-name: "Server Deployment"
+name: "QA Server Deployment"
 on: workflow_dispatch
 jobs:
   QA:
