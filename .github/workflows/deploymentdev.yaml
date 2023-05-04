@@ -7,20 +7,17 @@ on:
       - master
 jobs:
   deploy:
-    name: Push to EC2 Instance
+    name: Deploy to EC2 on master branch
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout the code
-        uses: actions/checkout@v1
+      - name: Checkout the files
+        uses: actions/checkout@v2
 
-      - name: Deploy to my EC2 instance
-        uses: easingthemes/ssh-deploy@v2.1.5
+      - name: Deploy to Server 1
+        uses: easingthemes/ssh-deploy@main
         env:
           SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
-          REMOTE_HOST: "ec2-44-215-126-12.compute-1.amazonaws.com"
-          REMOTE_USER: "ec2-user"
-	with:
-          local: testsw/code/test.html
-          remote: var/www/html
-	  SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
+          REMOTE_HOST: ec2-44-215-126-12.compute-1.amazonaws.com
+          REMOTE_USER: ec2-user
+          TARGET: /var/www/html
