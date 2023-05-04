@@ -6,12 +6,21 @@ on:
     branches:
       - master
 jobs:
-  deployment:
+  deploy:
+    name: Push to EC2 Instance
     runs-on: ubuntu-latest
-    name: deploy to dev
+
     steps:
-    - uses: actions/checkout@v2
-	env:
-	  SSH_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-	run: |
-	  echo $SSH_KEY | base64 -d > ssh-key | chmod 400 ssh-key | ssh -i ssh-key -o StrictHostKeyChecking=no ec2-user@44.215.126.12 "cd /home/ubuntu/sample-app-deployment-with-github-actions && GIT_SSH_COMMAND='ssh -i /home/ec2-user/.ssh' git pull origin main"
+      - name: Checkout the code
+        uses: actions/checkout@v1
+
+      - name: Deploy to my EC2 instance
+        uses: easingthemes/ssh-deploy@v2.1.5
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
+          REMOTE_HOST: "ec2-44-215-126-12.compute-1.amazonaws.com"
+          REMOTE_USER: "ec2-user"
+	with:
+          local: testsw/code/test.html
+          remote: var/www/html
+	  SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
