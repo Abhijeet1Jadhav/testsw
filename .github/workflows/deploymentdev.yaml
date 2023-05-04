@@ -1,0 +1,21 @@
+name: "Server Deployment"
+on:
+  pull_request:
+    types:
+      - opened
+    branches:
+      - master
+jobs:
+	deployment:
+	runs-on: ubuntu-latest
+  
+	steps:
+	- uses: actions/checkout@v2
+	- name: Deploy code to Server
+	env:
+		SSH_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+	run: |
+		echo $SSH_KEY | base64 -d > ssh-key
+    chmod 400 ssh-key
+
+    	ssh -i ssh-key -o StrictHostKeyChecking=no ec2-user@44.215.126.12 "cd /home/ubuntu/sample-app-deployment-with-github-actions && GIT_SSH_COMMAND='ssh -i /home/ec2-user/.ssh' git pull origin main"
