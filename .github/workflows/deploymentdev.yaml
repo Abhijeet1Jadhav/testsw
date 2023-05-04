@@ -2,7 +2,7 @@ name: "Server Deployment"
 on:
   pull_request:
     types:
-      - opened
+      - merged
     branches:
       - master
 jobs:
