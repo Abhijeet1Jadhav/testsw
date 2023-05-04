@@ -18,7 +18,7 @@ jobs:
         uses: easingthemes/ssh-deploy@main
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          SOURCE: ./
+          SOURCE: ./code/test.html
           REMOTE_HOST: ec2-44-215-126-12.compute-1.amazonaws.com
           REMOTE_USER: ec2-user
           TARGET: /var/www/html
