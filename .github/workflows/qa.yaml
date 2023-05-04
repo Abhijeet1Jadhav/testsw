@@ -1,5 +1,5 @@
 name: "QA Server Deployment"
-on: workflow_dispatch
+on: status
 jobs:
   QA:
     runs-on: ubuntu-latest
