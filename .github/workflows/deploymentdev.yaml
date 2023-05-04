@@ -2,12 +2,12 @@ name: "Server Deployment"
 on:
   pull_request:
     types:
-      - opened
+      - closed
     branches:
       - master
 jobs:
-  deploy:
-    name: Deploy to EC2 on master branch
+  if_merged:
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
 
     steps:
@@ -18,7 +18,7 @@ jobs:
         uses: easingthemes/ssh-deploy@main
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          SOURCE: ./code/index.html
+          SOURCE: index.html
           REMOTE_HOST: ec2-44-215-126-12.compute-1.amazonaws.com
           REMOTE_USER: ec2-user
           TARGET: /var/www/html
