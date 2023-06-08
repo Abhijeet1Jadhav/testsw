@@ -15,5 +15,5 @@ jobs:
     - name: publish to confluence
       uses: Abhijeet1Jadhav/publish-confluence@master
       with:
-        username: sunnyaj640@gmail.com
-        apitoken: ATATT3xFfGF0C5vi6KrnHNHNJKDra_WU4ZnQrAd-l-V9E7Qd55Og0VatOIq_y3a_FLeptJvF-Ci7r6IgHMgK15LCjGV2hVFU_MHbX9YVFrBkYobdaxE3iq8TcD8e9cxcT7w_FnNI1xsJ3SqCkAR8hFVDi25ywIWtSN15jRGmtu3Es3p-zgLSCR8=521F3E3E
+        username: ${{ secrets.atlassianUsername }}
+        apitoken: ${{ secrets.atlassianApitoken }}
