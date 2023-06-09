@@ -11,12 +11,24 @@
     "url": "git+https://github.com/Abhijeet1Jadhav/testsw.git"
   },
   "keywords": [
-    "testsw"
+    "testsw",
+    "publish"
   ],
   "author": "abhijeet",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Abhijeet1Jadhav/testsw/issues"
+  },
+  "publishConfig": 
+  {
+  "access": "public",
+  "provenance": true
+  },
+  {
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "tag": "latest"
+  }
   },
   "homepage": "https://github.com/Abhijeet1Jadhav/testsw#readme"
 }
