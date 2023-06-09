@@ -1,0 +1,22 @@
+{
+  "name": "test-r1",
+  "version": "1.0.0",
+  "description": "this is test",
+  "main": "index.js",
+  "scripts": {
+    "test": "ls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abhijeet1Jadhav/testsw.git"
+  },
+  "keywords": [
+    "testsw"
+  ],
+  "author": "abhijeet",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Abhijeet1Jadhav/testsw/issues"
+  },
+  "homepage": "https://github.com/Abhijeet1Jadhav/testsw#readme"
+}
