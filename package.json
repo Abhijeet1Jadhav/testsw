@@ -6,13 +6,50 @@
   "scripts": {
     "test": "ls"
   },
+  "dependencies": {
+    "@semantic-release/commit-analyzer": "^10.0.0",
+    "@semantic-release/error": "^3.0.0",
+    "@semantic-release/github": "^9.0.0",
+    "@semantic-release/npm": "^10.0.2",
+    "@semantic-release/release-notes-generator": "^11.0.0",
+    "aggregate-error": "^4.0.1",
+    "cosmiconfig": "^8.0.0",
+    "debug": "^4.0.0",
+    "env-ci": "^9.0.0",
+    "execa": "^7.0.0",
+    "figures": "^5.0.0",
+    "find-versions": "^5.1.0",
+    "get-stream": "^6.0.0",
+    "git-log-parser": "^1.2.0",
+    "hook-std": "^3.0.0",
+    "hosted-git-info": "^6.0.0",
+    "lodash-es": "^4.17.21",
+    "marked": "^4.1.0",
+    "marked-terminal": "^5.1.1",
+    "micromatch": "^4.0.2",
+    "p-each-series": "^3.0.0",
+    "p-reduce": "^3.0.0",
+    "read-pkg-up": "^9.1.0",
+    "resolve-from": "^5.0.0",
+    "semver": "^7.3.2",
+    "semver-diff": "^4.0.0",
+    "signale": "^1.2.1",
+    "yargs": "^17.5.1"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Abhijeet1Jadhav/testsw.git"
   },
   "keywords": [
-    "testsw",
-    "publish"
+    "author",
+    "automation",
+    "changelog",
+    "module",
+    "package",
+    "publish",
+    "release",
+    "semver",
+    "version"
   ],
   "author": "abhijeet",
   "license": "ISC",
