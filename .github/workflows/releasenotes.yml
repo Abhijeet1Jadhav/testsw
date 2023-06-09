@@ -22,7 +22,6 @@ jobs:
           node-version: lts/*
       - run: npm install -g npm
       - run: npm ci
-      - run: npm install -D @semantic-release/commit-analyzer @semantic-release/release-notes-generator @semantic-release/changelog @semantic-release/npm @semantic-release/git
       - run: npx semantic-release
         env:
           GITHUB_TOKEN: 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
