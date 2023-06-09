@@ -25,4 +25,4 @@ jobs:
       - run: npx semantic-release
         env:
           GITHUB_TOKEN: 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
-          NPM_TOKEN: ${{ secrets.RELEASE_NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.RELEASE_NPM_TOKEN }}
