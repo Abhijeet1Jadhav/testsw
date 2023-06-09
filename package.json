@@ -21,14 +21,10 @@
   },
   "publishConfig": 
   {
+  "registry": "https://registry.npmjs.org/",
+  "tag": "latest"
   "access": "public",
   "provenance": true
-  },
-  {
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/",
-    "tag": "latest"
-  }
   },
   "homepage": "https://github.com/Abhijeet1Jadhav/testsw#readme"
 }
