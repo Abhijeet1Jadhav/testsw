@@ -29,8 +29,6 @@
   "release": {
     "branches": ["master", "next"]
   },
-  {
-  "plugins": ["@semantic-release/commit-analyzer", "@semantic-release/release-notes-generator", "@semantic-release/npm"]
-  },
+  "plugins": ["@semantic-release/commit-analyzer", "@semantic-release/release-notes-generator", "@semantic-release/npm"],
   "homepage": "https://github.com/Abhijeet1Jadhav/testsw#readme"
 }
