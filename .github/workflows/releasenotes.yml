@@ -21,6 +21,7 @@ jobs:
           cache: npm
           node-version: lts/*
       - run: npm ci
+      - run: echo "//registry.npmjs.org/:_authToken=${{ secrets.RELEASE_NPM_TOKEN }}" > ~/.npmrc
       - run: npx semantic-release
         env:
           GITHUB_TOKEN: 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
